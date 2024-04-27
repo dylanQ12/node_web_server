@@ -1,0 +1,64 @@
+body {
+    padding: 20px;
+}
+
+/* Sombra para la tarjeta */
+.card {
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+}
+
+/* Resaltar filas al pasar el ratón */
+.table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Cabeceras de columna pegajosas */
+.table thead th {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 10;
+}
+
+/* Padding personalizado para celdas */
+.table td,
+.table th {
+    padding: 0.5em 0.75em;
+}
+
+/* Estilos personalizados para botones */
+.button.is-small {
+    font-size: 0.875em;
+}
+
+.button.is-primary {
+    background-color: #3273dc;
+    color: white;
+}
+
+.button.is-primary:hover {
+    background-color: #276cda;
+}
+
+.button.is-danger {
+    background-color: #f14668;
+    color: white;
+}
+
+.button.is-danger:hover {
+    background-color: #e23660;
+}
+
+.button.is-light {
+    background-color: #f5f5f5;
+    /* Color de fondo personalizado */
+    color: #363636;
+    /* Color del texto personalizado */
+    border-color: #dbdbdb;
+    /* Color del borde personalizado */
+}
+
+.button.is-light:hover {
+    background-color: #e8e8e8;
+    /* Color de fondo al pasar el ratón por encima */
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Cabecera (Head) -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <!-- Librería Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Framework Bulma CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <!-- style.css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Cuerpo principal (Body) -->
+<body>
+    <div class="columns">
+        <!-- Formulario de Productos -->
+        <div class="column is-half">
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title">
+                        Registro de Productos
+                    </p>
+                </header>
+                <div class="card-content">
+                    <form id="productForm">
+                        <input type="hidden" id="productId" name="productId">
+                        <div class="field">
+                            <label class="label" for="productName">Nombre del Producto:</label>
+                            <div class="control">
+                                <input class="input" type="text" id="productName" name="productName" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label" for="productQuantity">Cantidad:</label>
+                            <div class="control">
+                                <input class="input" type="number" id="productQuantity" name="productQuantity" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label" for="productPrice">Precio:</label>
+                            <div class="control">
+                                <input class="input" type="number" id="productPrice" name="productPrice" step="0.01"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <button class="button is-primary" type="button" onclick="submitProduct()"> <span
+                                        class="icon">
+                                        <i class="fas fa-save"></i>
+                                    </span>
+                                    <span>Guardar</span></button>
+                                <button type="button" class="button is-light" onclick="clearForm()"> <span class="icon">
+                                        <i class="fas fa-eraser"></i>
+                                    </span>
+                                    <span>Limpiar</span></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla de Productos -->
+        <div class="column is-half">
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title">
+                        Lista de Productos
+                    </p>
+                </header>
+                <div class="card-content">
+                    <table class="table is-fullwidth is-striped is-hoverable is-narrow">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Cantidad</th>
+                                <th>Precio</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="productTable">
+                            <!-- Los productos se insertarán aquí -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- app.js -->
+        <script src="app.js"></script>
+</body>
+
+</html>
